@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio | Kawasaki</title>
+    <link rel="icon" type="image/png" href="images/icon.png" sizes="25x10">
+    <link rel="stylesheet" type="text/css" href="styleindex.css">
+</head>
+<body>
+    <header>
+        <img src="images/kslogan.png">
+    </header>
+    <nav>
+        <a href="#i">Introducción</a>
+        <a href="#db">Datos Básicos</a>
+        <a href="#dt">Diseño Y Tecnología</a>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Galería</h3>
+                <!-- Producto 1 -->
+                <img src="images/p1.png" width="250" height="150px" class="clickable" data-info="<center><h4>Brute Force 300</h4> <center><img src='images/p1.png' height='' width=''></center> El peso en vacío incluye todos los materiales y líquidos necesarios para su correcto funcionamiento, el depósito de combustible lleno (más del 90 % de su capacidad) y el kit de herramientas (si se incluye).</center>">
+                <!-- Producto 2 -->
+                <img src="images/p2.png" width="250" height="150px" class="clickable" data-info="<center><h4>JET SKI® STX® 160X</h4> <center><img src='images/p2.png' height='' width=''></center> Este modelo cuenta con un motor potente y un diseño resistente para asegurar un rendimiento excepcional en el agua.</center>">
+                <!-- Producto 3 -->
+                <img src="images/p3.png" width="250" height="150px" class="clickable" data-info="<center><h4>MULE PRO-DXT™ FE DIESEL EPS</h4> <center><img src='images/p3.png' height='' width=''></center> Con un motor diésel, esta unidad ofrece una eficiencia sobresaliente y es perfecta para trabajos pesados y terrenos difíciles.</center>">
+                <!-- Producto 4 -->
+                <img src="images/p4.png" width="250" height="150px" class="clickable" data-info="<center><h4>MULE PRO-MX™ EPS True Mid-Size Muscle</h4> <center><img src='images/p4.png' height='' width=''></center> Ideal para tareas en el campo o aventuras fuera de carretera, con una capacidad de carga impresionante.</center>">
+                <!-- Producto 5 -->
+                <img src="images/p5.png" width="250" height="150px" class="clickable" data-info="<center><h4>NINJA® 650 Nothing Short of Legendary</h4> <center><img src='images/p5.png' height='' width=''></center> La Ninja 650 es una motocicleta deportiva que combina potencia y maniobrabilidad, perfecta para quienes buscan un rendimiento excepcional.</center>">
+        </aside>
+        <main class="main-content">
+            <center><h3>Información </h3></center>
+            <div id="product-display">
+                <h3 id="i">Introducción:</h3>
+                <p>El Messerschmitt Bf 109, a veces llamado Me 109, fue uno de los cazas más importantes y emblemáticos de la Luftwaffe (fuerza aérea alemana) durante la Segunda Guerra Mundial. Diseñado por Willy Messerschmitt y Robert Lusser en los años 30, el Bf 109 combinaba innovación, velocidad y potencia, convirtiéndose en el espinazo de la aviación de caza nazi durante gran parte del conflicto.<p>
+                <h2 id="db">Datos Básicos:</h2>
+                <p>
+                    <h3>Nombre completo:</h3> Messerschmitt Bf 109 (la denominación “Bf” viene de Bayerische Flugzeugwerke, la fábrica original).<br>
+<h3>Tipo:</h3> Caza monoplaza.<br>
+
+<h3>Primer vuelo:</h3> 28 de mayo de 1935.
+<br>
+<h3>Introducción al servicio:</h3> 1937, durante la Guerra Civil Española.
+<br>
+<h3>Retiro final:</h3> 1965 (por algunas fuerzas aéreas como la de España).
+<br>
+<h3>Producido por:</h3> Bayerische Flugzeugwerke y posteriormente Messerschmitt AG.
+<br>
+<h3>Producción total:</h3> Más de 33,000 unidades, convirtiéndolo en uno de los aviones de combate más producidos de la historia.
+                </p>
+                <h2 id="dt">Diseño y Tecnología:</h2>
+                <p>
+                   <h3> Estructura:</h3> Monoplano de ala baja, con tren de aterrizaje retráctil.
+
+<h3>Motor principal:</h3> Inicialmente el Junkers Jumo 210, luego reemplazado por motores más potentes como el Daimler-Benz DB 601, DB 605 y variantes.
+
+<h3>Velocidad máxima:</h3> Hasta 640 km/h en versiones avanzadas.
+
+<h3>Techo de servicio:</h3> Hasta 12,000 metros.
+
+<h3>Autonomía:</h3> Aprox. 850 km (dependía de la versión y armamento).
+
+<h3>Armamento típico:</h3>
+
+2 ametralladoras MG 17 de 7.92 mm (sobre el motor).
+
+1 cañón MG FF o MG 151 de 20 mm disparando a través del eje de la hélice.
+
+En versiones posteriores, se añadieron cañones en las alas o cápsulas adicionales.
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2025 EXPOKINAL - Todos los derechos reservados a César Aguirre.
+    </footer>
+    <!-- Modal para imagen ampliada -->
+<div id="img-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:2000;">
+    <img id="modal-img" src="" style="max-width:90%; max-height:90%; border:5px solid white; border-radius:10px;">
+</div>
+
+</body>
+<script>
+    // Al hacer clic en una imagen con clase "clickable"
+    document.querySelectorAll('.clickable').forEach(img => {
+        img.addEventListener('click', function () {
+            const modal = document.getElementById('img-modal');
+            const modalImg = document.getElementById('modal-img');
+            modalImg.src = this.src;
+            modal.style.display = 'flex';
+        });
+    });
+
+    // Al hacer clic fuera de la imagen, se cierra
+    document.getElementById('img-modal').addEventListener('click', function (e) {
+        if (e.target.id === 'img-modal') {
+            this.style.display = 'none';
+        }
+    });
+</script>
+
+</html>
